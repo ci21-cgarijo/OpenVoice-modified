@@ -145,7 +145,7 @@ class ToneColorConverter(OpenVoiceBaseClass):
             audio, sample_rate = librosa.load(audio_src_path, sr=hps.data.sampling_rate)
         else:
             audio = audio_src_path
-        audio = torch.tensor(audio).float()
+        # audio = torch.tensor(audio).float()
         
         with torch.no_grad():
             y = torch.FloatTensor(audio).to(self.device)
